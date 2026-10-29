@@ -1,0 +1,21 @@
+.root { -fx-font-family: "DejaVu Sans", "Arial"; -fx-font-size: 15px; }
+.app-root, .viewport { -fx-background-color: #f2f5fb; }
+.screen { -fx-padding: 26; -fx-background-color: #f2f5fb; }
+.label, .check-box { -fx-text-fill: #152e48; }
+.title { -fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #152e48; }
+.subtitle { -fx-font-size: 18px; }
+.heading { -fx-font-size: 19px; -fx-font-weight: bold; }
+.suits { -fx-font-size: 48px; -fx-text-fill: #2359b0; }
+.player-panel { -fx-padding: 20; -fx-background-color: #ffffff; -fx-background-radius: 14; -fx-border-color: #95a8c0; -fx-border-radius: 14; -fx-border-width: 1; }
+.button { -fx-padding: 11 17; -fx-background-radius: 7; -fx-background-color: #dce6f5; -fx-text-fill: #152e48; -fx-cursor: hand; }
+.button:hover { -fx-background-color: #c4d6ef; }
+.button.primary { -fx-background-color: #2359b0; -fx-text-fill: #ffffff; -fx-font-weight: bold; }
+.button:disabled { -fx-opacity: 0.48; -fx-cursor: default; }
+.button:focused, .check-box:focused, .spinner:focused { -fx-border-color: #c35600; -fx-border-width: 3; -fx-border-radius: 7; }
+.card { -fx-min-width: 72; -fx-pref-height: 96; -fx-alignment: center; -fx-font-size: 25px; -fx-font-weight: bold; -fx-background-color: #ffffff; -fx-text-fill: #182838; -fx-background-radius: 9; -fx-border-color: #758896; -fx-border-radius: 9; }
+.red-card { -fx-text-fill: #b32035; }
+.card-back { -fx-background-color: #2359b0; -fx-text-fill: #ffffff; }
+.status { -fx-text-fill: #194e87; -fx-font-weight: bold; }
+.muted { -fx-text-fill: #475c72; -fx-font-size: 13px; }
+.error { -fx-text-fill: #b02131; -fx-font-weight: bold; }
+.spinner { -fx-pref-height: 36; }

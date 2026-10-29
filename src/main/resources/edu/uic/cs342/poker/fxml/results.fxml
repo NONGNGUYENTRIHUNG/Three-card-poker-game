@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uic.cs342.poker.controller.ResultsController" fitToWidth="true" styleClass="app-root"><content><VBox spacing="16" styleClass="screen">
+<HBox alignment="CENTER_LEFT" spacing="12"><Button text="Main Menu" fx:id="menuButton" onAction="#menu"/><Button text="How to Play" onAction="#help"/><Region HBox.hgrow="ALWAYS"/><Button text="Switch Theme" onAction="#theme"/></HBox><Label text="ROUND SUMMARY" styleClass="title"/><Label fx:id="roundLabel" styleClass="heading"/>
+<VBox alignment="CENTER" spacing="10"><Label text="DEALER" styleClass="heading"/><HBox fx:id="dealerCards" alignment="CENTER" spacing="12"/><Label fx:id="dealerInfo" wrapText="true"/></VBox>
+<HBox spacing="22"><VBox spacing="12" styleClass="player-panel" HBox.hgrow="ALWAYS" prefWidth="460"><Label text="PLAYER 1" styleClass="heading"/><HBox fx:id="p1Cards" alignment="CENTER" spacing="12"/><Label fx:id="p1Outcome" wrapText="true" styleClass="status"/><Label fx:id="p1Summary" wrapText="true"/><Label fx:id="p1Total" styleClass="heading"/></VBox><VBox spacing="12" styleClass="player-panel" HBox.hgrow="ALWAYS" prefWidth="460"><Label text="PLAYER 2" styleClass="heading"/><HBox fx:id="p2Cards" alignment="CENTER" spacing="12"/><Label fx:id="p2Outcome" wrapText="true" styleClass="status"/><Label fx:id="p2Summary" wrapText="true"/><Label fx:id="p2Total" styleClass="heading"/></VBox></HBox>
+<Label text="Net gain/loss excludes returned original stakes. A carried Ante remains held, not won or lost yet." styleClass="muted" wrapText="true"/>
+<Button text="Play Another Round" onAction="#next" styleClass="primary" maxWidth="Infinity"/>
+</VBox></content></ScrollPane>

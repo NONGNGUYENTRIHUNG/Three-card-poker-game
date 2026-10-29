@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.uic.cs342.poker.controller.GameController" fitToWidth="true" styleClass="app-root"><content><VBox spacing="15" styleClass="screen">
+<HBox alignment="CENTER_LEFT" spacing="12"><Button text="Main Menu" fx:id="menuButton" onAction="#menu"/><Button text="How to Play" onAction="#help"/><Region HBox.hgrow="ALWAYS"/><Button text="Switch Theme" onAction="#theme"/></HBox><Label text="THREE CARD POKER" styleClass="title"/><Label fx:id="phaseLabel" styleClass="heading"/><Label fx:id="statusLabel" wrapText="true" styleClass="status"/>
+<VBox alignment="CENTER" spacing="8"><Label text="DEALER / Cards hidden until both decisions"/><HBox fx:id="dealerCards" alignment="CENTER" spacing="12"/></VBox>
+<HBox spacing="22">
+<VBox spacing="12" styleClass="player-panel" HBox.hgrow="ALWAYS" prefWidth="460">
+ <Label text="PLAYER 1" styleClass="heading"/>
+ <HBox fx:id="p1Cards" spacing="12" alignment="CENTER"/>
+ <Label fx:id="p1Info" wrapText="true"/>
+ <HBox spacing="10" alignment="CENTER_LEFT"><Label text="Ante ($5-$25)" labelFor="$ante1"/><Spinner fx:id="ante1" prefWidth="100"/></HBox>
+ <HBox spacing="10" alignment="CENTER_LEFT"><CheckBox fx:id="ppOn1" text="Pair Plus ($5-$25)"/><Spinner fx:id="pp1" prefWidth="100"/></HBox>
+ <Label fx:id="p1Decision" wrapText="true" styleClass="status"/>
+ <HBox spacing="12"><Button fx:id="play1" text="Play" onAction="#play1" styleClass="primary" HBox.hgrow="ALWAYS" maxWidth="Infinity"/><Button fx:id="fold1" text="Fold" onAction="#fold1" HBox.hgrow="ALWAYS" maxWidth="Infinity"/></HBox>
+</VBox>
+<VBox spacing="12" styleClass="player-panel" HBox.hgrow="ALWAYS" prefWidth="460">
+ <Label text="PLAYER 2" styleClass="heading"/>
+ <HBox fx:id="p2Cards" spacing="12" alignment="CENTER"/>
+ <Label fx:id="p2Info" wrapText="true"/>
+ <HBox spacing="10" alignment="CENTER_LEFT"><Label text="Ante ($5-$25)" labelFor="$ante2"/><Spinner fx:id="ante2" prefWidth="100"/></HBox>
+ <HBox spacing="10" alignment="CENTER_LEFT"><CheckBox fx:id="ppOn2" text="Pair Plus ($5-$25)"/><Spinner fx:id="pp2" prefWidth="100"/></HBox>
+ <Label fx:id="p2Decision" wrapText="true" styleClass="status"/>
+ <HBox spacing="12"><Button fx:id="play2" text="Play" onAction="#play2" styleClass="primary" HBox.hgrow="ALWAYS" maxWidth="Infinity"/><Button fx:id="fold2" text="Fold" onAction="#fold2" HBox.hgrow="ALWAYS" maxWidth="Infinity"/></HBox>
+</VBox></HBox>
+<Label fx:id="errorLabel" wrapText="true" styleClass="error"/><Button fx:id="dealButton" text="Deal Cards" onAction="#deal" styleClass="primary" maxWidth="Infinity"/>
+<Label text="Ante stays locked when carried forward. Pair Plus Off = $0. Totals show net profit/loss." wrapText="true" styleClass="muted"/>
+</VBox></content></ScrollPane>
